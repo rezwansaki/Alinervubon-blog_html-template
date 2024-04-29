@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap');
+
+body {
+    font-family: "Tiro Bangla", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* ১২, ১৬, ১৮, ২০, ২২, ২৪ থেকে ২৮, ৩২ এগুলো ভালো আসে কিন্তু ১৪ ভালো আসে না। */
+    font-size: 16px;
+    columns: #333;
+    /* 1 = 14px so, 1.54 * 14px = 21.56px */
+    line-height: 24px;
+    background-color: #888;
+}
+
+#page {
+    background-color: white;
+    border: 2px #333 solid;
+    min-height: 800px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* navbar and navbar menu start here */
+.navbar-custom {
+    background: linear-gradient(180deg, rgba(70, 70, 70, 1) 0%, rgba(57, 57, 57, 1) 51%, rgba(70, 70, 70, 1) 100%);
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #f5f7fa;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #0FA4AF;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.navbar-custom .navbar-toggler {
+    border-color: #0FA4AF;
+}
+
+.navbar-custom .nav-item.dropdown .dropdown-menu {
+    background-color: #0FA4AF;
+}
+
+/* Custom Dropdown Background Color on Hover */
+.navbar-custom .nav-item.dropdown:hover .dropdown-menu {
+    background-color: #0FA4AF;
+    border-radius: unset;
+    /* margin-top: 0; - to avoid dropdown menu shows problem */
+    margin-top: 0;
+    display: block;
+}
+
+/* Custom Text Color for Dropdown Items on Hover */
+.navbar-custom .nav-item.dropdown:hover .dropdown-menu a.dropdown-item:hover {
+    color: #f5f7fa;
+    background-color: #0FA4AF;
+}
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+    background-color: #0FA4AF;
+    border-radius: unset;
+}
+
+.dropdown-menu>li:hover .submenu {
+    display: block;
+}
+
+
+/* navbar and navbar menu end here */
+
+
+/* specific screen size start here */
+@media screen and (max-width:575px) {
+    .banner img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .banner img {
+        width: 100%;
+
+    }
+}
+
+/* specific screen size end here */
