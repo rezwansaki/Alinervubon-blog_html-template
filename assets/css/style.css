@@ -12,6 +12,7 @@ body {
     background-color: #888;
 }
 
+/* full website container */
 #page {
     background-color: white;
     border: 2px #333 solid;
@@ -20,7 +21,23 @@ body {
     margin-bottom: 10px;
 }
 
-/* navbar and navbar menu start here */
+/* =========================== Navigation Dropdown Manu Bar Start Here ======================================= */
+.dropdown-nested {
+    position: relative;
+    top: 4px;
+}
+
+.dropdown-nested .submenu-nested {
+    position: absolute !important;
+    left: 100%;
+    top: 4px;
+}
+
+.dropdown-nested .dropdown-toggle {
+    padding: .25rem 1.1rem !important;
+}
+
+
 .navbar-custom {
     background: linear-gradient(180deg, rgba(70, 70, 70, 1) 0%, rgba(57, 57, 57, 1) 51%, rgba(70, 70, 70, 1) 100%);
 }
@@ -37,51 +54,31 @@ body {
     font-size: 16px;
 }
 
+/* mobile menu main toggle button */
 .navbar-custom .navbar-toggler {
     border-color: #0FA4AF;
 }
 
 .navbar-custom .nav-item.dropdown .dropdown-menu {
-    background-color: #0FA4AF;
+    background-color: #333;
 }
 
-/* Custom Dropdown Background Color on Hover */
-.navbar-custom .nav-item.dropdown:hover .dropdown-menu {
-    background-color: #0FA4AF;
-    border-radius: unset;
-    /* margin-top: 0; - to avoid dropdown menu shows problem */
-    margin-top: 0;
-    display: block;
+.navbar-custom .dropdown-item {
+    color: #f5f7fa;
+    padding: 10px 15px;
+    font-size: 16px;
 }
 
-/* Custom Text Color for Dropdown Items on Hover */
-.navbar-custom .nav-item.dropdown:hover .dropdown-menu a.dropdown-item:hover {
+.navbar-custom .navbar-nav .nav-item:hover a.dropdown-item:hover {
     color: #f5f7fa;
     background-color: #0FA4AF;
 }
 
-.dropdown-menu li {
-    position: relative;
-}
-
-.dropdown-menu .submenu {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: -7px;
-    background-color: #0FA4AF;
-    border-radius: unset;
-}
-
-.dropdown-menu>li:hover .submenu {
-    display: block;
-}
+/* =========================== Navigation Dropdown Manu Bar End Here ======================================= */
 
 
-/* navbar and navbar menu end here */
 
-
-/* specific screen size start here */
+/* =========================== Media screen for different size screen Start Here ============================ */
 @media screen and (max-width:575px) {
     .banner img {
         width: 100%;
@@ -92,6 +89,20 @@ body {
     .banner img {
         width: 100%;
     }
+
+    .dropdown-nested .submenu-nested {
+        position: static !important;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .banner img {
+        width: 100%;
+    }
+
+    .dropdown-nested .submenu-nested {
+        position: static !important;
+    }
 }
 
 @media screen and (max-width:992px) {
@@ -101,4 +112,4 @@ body {
     }
 }
 
-/* specific screen size end here */
+/* =========================== Media screen for different size screen End Here ============================ */
