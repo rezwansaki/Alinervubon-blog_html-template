@@ -382,7 +382,8 @@ a:hover {
 }
 
 .site-mobile-menu .site-nav-wrap .arrow-collapse:hover {
-    background: #f8f9fa;
+    /* background: #f8f9fa; */
+    background: #074173;
 }
 
 .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
@@ -521,7 +522,7 @@ a:hover {
 }
 
 .post-info {
-    padding: 5px 0;
+    padding: 10px 0;
     font-size: 14px;
     color: #6b6b6b;
     text-align: left;
@@ -553,6 +554,37 @@ a:hover {
     color: #fff;
 }
 
+/* pagination wrapper */
+.pagination-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #12372A;
+    color: white;
+    border: 1px solid #12372A;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/* right sidebar wrapper */
 .right-sidebar-wrapper {
     padding: 20px 10px;
     border-left: 1px solid #D6DAC8;
@@ -568,15 +600,18 @@ a:hover {
     text-align: center;
     padding: 20px 10px;
     margin-bottom: 5px;
+    font-size: 16px;
 }
 
 .copyright-info {
     color: #fff;
     padding: 10px 0;
+    font-weight: normal;
 }
 
 .developer-info {
     color: #fff;
+    font-weight: normal;
 }
 
 /* =========================== Footer Part End Here ======================================= */
