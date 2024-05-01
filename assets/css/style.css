@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap');
+/* google fonts - Tiro Bangla */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap'); */
+
+/* embed font - SolaimanLipi(8-Jan-11)-CustomizedBy-Saif */
+@font-face {
+    font-family: 'SolaimanLipi';
+    src: url('../fonts/SolaimanLipi.ttf');
+}
 
 body {
-    font-family: "Tiro Bangla", serif;
+    font-family: "SolaimanLipi", serif;
     font-weight: 400;
     font-style: normal;
     /* ১২, ১৬, ১৮, ২০, ২২, ২৪ থেকে ২৮, ৩২ এগুলো ভালো আসে কিন্তু ১৪ ভালো আসে না। */
