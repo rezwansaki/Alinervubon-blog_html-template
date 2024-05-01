@@ -1,48 +1,87 @@
-(function ($bs) {
-    const CLASS_NAME = 'has-child-dropdown-show';
-    $bs.Dropdown.prototype.toggle = function (_orginal) {
-        return function () {
-            document.querySelectorAll('.' + CLASS_NAME).forEach(function (e) {
-                e.classList.remove(CLASS_NAME);
+$(function () {
+
+    // var siteSticky = function () {
+    //     $(".js-sticky-header").sticky({ topSpacing: 0 });
+    // };
+    // siteSticky();
+
+    var siteMenuClone = function () {
+
+        $('.js-clone-nav').each(function () {
+            var $this = $(this);
+            $this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
+        });
+
+
+        setTimeout(function () {
+
+            var counter = 0;
+            $('.site-mobile-menu .has-children').each(function () {
+                var $this = $(this);
+
+                $this.prepend('<span class="arrow-collapse collapsed">');
+
+                $this.find('.arrow-collapse').attr({
+                    'data-toggle': 'collapse',
+                    'data-target': '#collapseItem' + counter,
+                });
+
+                $this.find('> ul').attr({
+                    'class': 'collapse',
+                    'id': 'collapseItem' + counter,
+                });
+
+                counter++;
+
             });
-            let dd = this._element.closest('.dropdown').parentNode.closest('.dropdown');
-            for (; dd && dd !== document; dd = dd.parentNode.closest('.dropdown')) {
-                dd.classList.add(CLASS_NAME);
-            }
-            return _orginal.call(this);
-        }
-    }($bs.Dropdown.prototype.toggle);
 
-    document.querySelectorAll('.dropdown').forEach(function (dd) {
-        dd.addEventListener('hide.bs.dropdown', function (e) {
-            if (this.classList.contains(CLASS_NAME)) {
-                this.classList.remove(CLASS_NAME);
-                e.preventDefault();
-            }
-            if (e.clickEvent && e.clickEvent.composedPath().some(el => el.classList && el.classList.contains('dropdown-toggle'))) {
-                e.preventDefault();
-            }
-            e.stopPropagation(); // do not need pop in multi level mode
-        });
-    });
+        }, 1000);
 
-    // for hover
-    function getDropdown(element) {
-        return $bs.Dropdown.getInstance(element) || new $bs.Dropdown(element);
-    }
+        $('body').on('click', '.arrow-collapse', function (e) {
+            var $this = $(this);
+            if ($this.closest('li').find('.collapse').hasClass('show')) {
+                $this.removeClass('active');
+            } else {
+                $this.addClass('active');
+            }
+            e.preventDefault();
 
-    document.querySelectorAll('.dropdown-hover, .dropdown-hover-all .dropdown').forEach(function (dd) {
-        dd.addEventListener('mouseenter', function (e) {
-            let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
-            if (!toggle.classList.contains('show')) {
-                getDropdown(toggle).toggle();
+        });
+
+        $(window).resize(function () {
+            var $this = $(this),
+                w = $this.width();
+
+            if (w > 768) {
+                if ($('body').hasClass('offcanvas-menu')) {
+                    $('body').removeClass('offcanvas-menu');
+                }
+            }
+        })
+
+        $('body').on('click', '.js-menu-toggle', function (e) {
+            var $this = $(this);
+            e.preventDefault();
+
+            if ($('body').hasClass('offcanvas-menu')) {
+                $('body').removeClass('offcanvas-menu');
+                $this.removeClass('active');
+            } else {
+                $('body').addClass('offcanvas-menu');
+                $this.addClass('active');
+            }
+        })
+
+        // click outisde offcanvas
+        $(document).mouseup(function (e) {
+            var container = $(".site-mobile-menu");
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                if ($('body').hasClass('offcanvas-menu')) {
+                    $('body').removeClass('offcanvas-menu');
+                }
             }
         });
-        dd.addEventListener('mouseleave', function (e) {
-            let toggle = e.target.querySelector(':scope>[data-bs-toggle="dropdown"]');
-            if (toggle.classList.contains('show')) {
-                getDropdown(toggle).toggle();
-            }
-        });
-    });
-})(bootstrap);
+    };
+    siteMenuClone();
+
+});
