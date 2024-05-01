@@ -17,7 +17,7 @@ body {
     background-color: white;
     /* border: 2px #153448 solid; */
     border: 2px #1A4D2E solid;
-    min-height: 800px;
+    height: auto;
     margin-top: 10px;
     margin-bottom: 5px;
     padding: 0;
@@ -471,28 +471,92 @@ a:hover {
 
 /* =========================== Body Part Start Here ======================================================== */
 .post-wrapper {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .single-post {
     padding: 45px 50px;
     background-color: #fff;
     border: 1px solid #dadada;
+    margin-bottom: 20px;
 }
 
-.post-feature-image {
+.post-feature-image img {
     float: left;
-}
-
-.post-feature-image {
     width: 300px;
     height: 200px;
+    border: 1px solid #999;
+    padding: 5px;
+    margin: 5px 10px;
+}
+
+.post-title {
+    font-weight: 700;
+    font-size: 30px;
+    color: #333;
+    padding-bottom: 10px;
+    text-align: left;
+    line-height: 1.2;
+    transition: all 0.5s ease-out allow-discrete;
+}
+
+.post-title a {
+    font-weight: 700;
+    font-size: 30px;
+    color: #333;
+    padding-bottom: 10px;
+    text-align: left;
+    line-height: 1.2;
+    transition: all 0.5s ease-out allow-discrete;
+}
+
+.post-title a:hover {
+    font-weight: 700;
+    font-size: 30px;
+    color: #176B87;
+    padding-bottom: 10px;
+    text-align: left;
+    line-height: 1.2;
+    transition: all 0.5s ease-out allow-discrete;
+}
+
+.post-info {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #6b6b6b;
+    text-align: left;
+}
+
+.post-description {
+    text-align: justify;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.9;
+}
+
+.read-more {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.read-more a {
+    border: 1px solid #135D66;
+    color: #333;
+    border-radius: inherit;
+    transition: all 0.5s ease-out allow-discrete;
+}
+
+.read-more a:hover {
+    border: 1px solid #135D66;
+    border-radius: inherit;
+    background-color: #135D66;
+    color: #fff;
 }
 
 .right-sidebar-wrapper {
     padding: 20px 10px;
     border-left: 1px solid #D6DAC8;
-    height: 100vh;
+    height: 100%;
 }
 
 /* =========================== Body Part End Here   ======================================================== */
