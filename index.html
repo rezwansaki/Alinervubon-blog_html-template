@@ -7,7 +7,7 @@
     <!-- Meta Tag SEO -->
     <meta content=', Alinervubon Blog, HTML Template' name='keywords' />
     <meta name="description" content="Alinervubon Blog | Bootstrap HTML Template">
-    <!-- fontawesome-free-6.5.2-web all.min.css -->
+    <!-- fontawesome-free-6.5.2-web -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <!-- icommon for icon -->
     <link rel="stylesheet" href="assets/icomoon/style.css">
@@ -58,7 +58,10 @@
                             <div class="site-mobile-menu">
                                 <div class="site-mobile-menu-header">
                                     <div class="site-mobile-menu-close mt-3">
-                                        <span class="icon-close2 js-menu-toggle"></span>
+                                        <!-- <span class="icon-close2 js-menu-toggle"></span> -->
+                                        <span class="js-menu-toggle">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="site-mobile-menu-body"></div>
@@ -71,11 +74,10 @@
                                         <!-- Navigation Menu Start Here -->
                                         <div class="col-12 col-md-10 d-none d-xl-block">
                                             <nav class="site-navigation position-relative text-left" role="navigation">
-
                                                 <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                                                    <li class="active"><a href="index.html"><span>Home</span></a></li>
+                                                    <li class="active"><a href="index.html"><span>হোম</span></a></li>
                                                     <li class="has-children">
-                                                        <a href="about.html"><span>Dropdown</span></a>
+                                                        <a href="about.html"><span>তথ্য ও যোগাযোগ প্রযুক্তি</span></a>
                                                         <ul class="dropdown arrow-top">
                                                             <li><a href="#">Menu One</a></li>
                                                             <li><a href="#">Menu Two</a></li>
@@ -90,7 +92,7 @@
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="about.html"><span>About</span></a></li>
+                                                    <li><a href="about.html"><span>ভিন্ন-লেখা</span></a></li>
                                                     <li><a href="contact.html"><span>Contact</span></a></li>
                                                 </ul>
                                             </nav>
@@ -100,8 +102,12 @@
                                         <!-- Mobile Menu Button Start Here -->
                                         <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
                                             style="position: relative; top: 3px;">
-                                            <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span
-                                                    class="icon-menu h3"></span></a>
+                                            <a href="#" class="site-menu-toggle js-menu-toggle text-white">
+                                                <!-- <span class="icon-menu h3"></span> -->
+                                                <span class="h3">
+                                                    <i class="fa-solid fa-bars"></i>
+                                                </span>
+                                            </a>
                                         </div>
                                         <!-- Mobile Menu Button End Here -->
                                     </div>
