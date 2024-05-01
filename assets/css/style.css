@@ -8,17 +8,19 @@ body {
     font-size: 16px;
     /* 1 = 14px so, 1.54 * 14px = 21.56px */
     line-height: 24px;
-    background-color: #888;
+    background-color: #9CAFAA;
 }
 
 
-/* full website container */
+/* full website container exclude footer part */
 #page {
     background-color: white;
-    border: 2px #333 solid;
+    /* border: 2px #153448 solid; */
+    border: 2px #1A4D2E solid;
     min-height: 800px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    padding: 0;
 }
 
 /* =========================== Navigation Dropdown Manu Bar Start Here ======================================= */
@@ -38,6 +40,7 @@ a:hover {
     text-decoration: none !important;
 }
 
+/* navbar menu container */
 .site-navbar {
     margin-bottom: 0px;
     z-index: 1999;
@@ -463,6 +466,57 @@ a:hover {
 }
 
 /* =========================== Navigation Dropdown Manu Bar End Here ======================================= */
+
+
+
+/* =========================== Body Part Start Here ======================================================== */
+.post-wrapper {
+    padding-top: 20px;
+}
+
+.single-post {
+    padding: 45px 50px;
+    background-color: #fff;
+    border: 1px solid #dadada;
+}
+
+.post-feature-image {
+    float: left;
+}
+
+.post-feature-image {
+    width: 300px;
+    height: 200px;
+}
+
+.right-sidebar-wrapper {
+    padding: 20px 10px;
+    border-left: 1px solid #D6DAC8;
+    height: 100vh;
+}
+
+/* =========================== Body Part End Here   ======================================================== */
+
+
+/* =========================== Footer Part Start Here ======================================= */
+.footer-area {
+    background-color: #153448;
+    text-align: center;
+    padding: 20px 10px;
+    margin-bottom: 5px;
+}
+
+.copyright-info {
+    color: #fff;
+    padding: 10px 0;
+}
+
+.developer-info {
+    color: #fff;
+}
+
+/* =========================== Footer Part End Here ======================================= */
+
 
 
 
