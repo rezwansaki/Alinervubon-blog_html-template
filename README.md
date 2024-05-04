@@ -1,4 +1,5 @@
-# Alinervubon-blog_html-template - Bootstrap v5.3.3 Project
+# Alinervubon - Blog
+## Alinervubon-blog_html-template - Bootstrap v5.3.3 Project
 
 
 ![Alt text](screenshot1.png "Alinervubon-blog_html-template - Bootstrap v5.3.3 Project")
@@ -20,7 +21,7 @@
 
 ### Last Update:
 
-29-Apr-2024
+04-May-2024
 
 ### Developed by:
 
