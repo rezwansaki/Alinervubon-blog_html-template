@@ -263,8 +263,9 @@ a:hover {
     width: 300px;
     position: fixed;
     right: 0;
+    top: 0;
     z-index: 2000;
-    padding-top: 20px;
+    padding-top: 0;
     background: #153448;
     height: calc(100vh);
     -webkit-transform: translateX(110%);
@@ -470,7 +471,6 @@ a:hover {
 /* =========================== Navigation Dropdown Manu Bar End Here ======================================= */
 
 
-
 /* =========================== Body Part Start Here ======================================================== */
 .post-wrapper {
     padding-top: 10px;
@@ -633,6 +633,20 @@ a:hover {
     font-weight: normal;
 }
 
+/* search start here */
+.sidebar-search .form-control {
+    border-radius: 0;
+}
+
+.sidebar-search .search-button {
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
 .search-button {
     border: 1px solid #135D66;
     color: #333;
@@ -647,6 +661,8 @@ a:hover {
     background-color: #135D66;
     color: #fff;
 }
+
+/* search end here */
 
 /* =========================== Body Part End Here   ======================================================== */
 
