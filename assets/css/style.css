@@ -472,6 +472,56 @@ a:hover {
 /* =========================== Navigation Dropdown Manu Bar End Here ======================================= */
 
 
+/* =========================== Navbar search Start Here =========================================== */
+.navbar-search {
+    text-align: end;
+    float: right;
+    font-size: 20px;
+    display: flex;
+    padding: 5px 5px;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-search:hover input {
+    width: 200px;
+}
+
+.navbar-search:hover {
+    background-color: #fff;
+}
+
+.navbar-search:hover a i {
+    color: #43766C;
+    font-size: 18px;
+}
+
+.navbar-search input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.navbar-search a {
+    padding: 5px 10px 5px 0;
+}
+
+.navbar-search a i {
+    color: #fff;
+    font-size: 18px;
+}
+
+.site-menu-toggle i {
+    padding: 10px 0 0 0;
+}
+
+/* =========================== Navbar search Start End Here ======================================= */
+
+
 /* =========================== Body Part Start Here ======================================================== */
 .post-wrapper {
     padding-top: 10px;
